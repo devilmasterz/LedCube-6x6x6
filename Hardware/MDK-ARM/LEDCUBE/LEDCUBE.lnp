@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"ledcube\startup_stm32f103xb.o"
+"ledcube\main.o"
+"ledcube\stm32f1xx_it.o"
+"ledcube\stm32f1xx_hal_msp.o"
+"ledcube\stm32f1xx_hal_gpio_ex.o"
+"ledcube\stm32f1xx_hal_adc.o"
+"ledcube\stm32f1xx_hal_adc_ex.o"
+"ledcube\stm32f1xx_hal.o"
+"ledcube\stm32f1xx_hal_rcc.o"
+"ledcube\stm32f1xx_hal_rcc_ex.o"
+"ledcube\stm32f1xx_hal_gpio.o"
+"ledcube\stm32f1xx_hal_dma.o"
+"ledcube\stm32f1xx_hal_cortex.o"
+"ledcube\stm32f1xx_hal_pwr.o"
+"ledcube\stm32f1xx_hal_flash.o"
+"ledcube\stm32f1xx_hal_flash_ex.o"
+"ledcube\stm32f1xx_hal_exti.o"
+"ledcube\stm32f1xx_hal_tim.o"
+"ledcube\stm32f1xx_hal_tim_ex.o"
+"ledcube\stm32f1xx_hal_uart.o"
+"ledcube\system_stm32f1xx.o"
+--strict --scatter "LEDCUBE\LEDCUBE.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LEDCUBE.map" -o LEDCUBE\LEDCUBE.axf
