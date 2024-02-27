@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/anh_den_cho_dien_thoai_2"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical"
+            android:background="@drawable/pngtree_molecules_s"
+
+
+            >
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bluetooth"
+                android:scaleType="centerCrop"
+                />
+            <Button
+                android:id="@+id/btn_Connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kết nối"
+                android:layout_marginLeft="5dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp"
+               >
+
+                <TextView
+                    android:id="@+id/textConnect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Chưa kết nối"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="27dp" />
+                <TextView
+                    android:id="@+id/nameDevice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/teal_200"
+                    android:textSize="12dp"
+
+                    android:layout_gravity="center"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bgListDevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bgDevice"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Danh sách thiết bị kết nối"
+                android:textSize="18dp"
+                android:gravity="center"
+
+                />
+
+
+            <ListView
+                android:id="@+id/deviceListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+
+            >
+            <Button
+                android:id="@+id/btnOnOff"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/power"
+                android:layout_marginLeft="10dp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
+                >
+                <Button
+                    android:id="@+id/btnMode0"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Chế độ thường"
+                    android:textAllCaps="false"
+                    />
+                <Button
+                    android:id="@+id/btnMode1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Chế độ âm thanh"
+                    android:textAllCaps="false"
+                    />
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnMic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/mic"
+                android:layout_marginLeft="30dp"
+
+                />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@color/black"
+                android:layout_marginLeft="5dp"
+
+                />
+
+        </LinearLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</ScrollView>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/siuu"
+        android:minHeight="500dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Chế độ thường"
+            android:textColor="@color/textMode"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+
+            android:id="@+id/layoutMode0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+
+                >
+
+                <EditText
+                    android:id="@+id/textShow"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:hint="  Nhập chữ muốn hiện..."
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btnShowText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Hiện chữ"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2">
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode0Type0"
+                        android:layout_width="180dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Nomal"
+                        android:textAllCaps="false"
+
+                        />
+
+                    <Button
+                        android:id="@+id/btnMode0Type1"
+                        android:layout_width="180dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Signal Random"
+                        android:textAllCaps="false"
+
+                        />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode0Type2"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Growing Cube"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode0Type3"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Rain"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode0Type4"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Snake"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode0Type5"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Stretched"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode0Type6"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Trail"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode0Type7"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Spiral"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode0Type8"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Random On/Off"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode0Type9"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Random Cube"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode0Type10"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Random Cube"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode0Type11"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Sun"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode0Type12"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Dynamic Noise"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode0Type13"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Random YZ"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode0Type14"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Frame"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode0Type15"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Full"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutMode1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/siuu"
+            android:minHeight="500dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+            >
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/ccc"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="Điều chỉnh độ cảm biến:"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+                    />
+
+                <Button
+                    android:id="@+id/btnDown"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/volume_727213"
+
+
+                    />
+
+                <Button
+                    android:id="@+id/btnUp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/volume_727226" />
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2">
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode1Type0"
+                        android:layout_width="180dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Nomal"
+                        android:textAllCaps="false"
+
+                        />
+
+                    <Button
+                        android:id="@+id/btnMode1Type1"
+                        android:layout_width="180dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Fash LED"
+                        android:textAllCaps="false"
+
+                        />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode1Type2"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Adjust Brightness"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode1Type3"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Responsive Blink"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode1Type4"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Sound Frame"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode1Type5"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Sound Responsive"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnMode1Type6"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Floor Jumping"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnMode1Type7"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:text="Frame Corner"
+                        android:textAllCaps="false" />
+
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
